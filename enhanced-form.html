@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enhanced-form</title>
+</head>
+<body>
+
+<header>
+    <h1>Check Out Our Features and Plans</h1>
+    <h5>Explore the benefits of our service and choose the plan that suits you best.</h5>
+</header>
+
+<section>
+    <h3>Features</h3>
+    <ul>
+        <li>Secure Password Encryption</li>
+        <li>24/7 Customer Support</li>
+        <li>Free 30-Day Trial</li>
+    </ul>
+    <p>Our service offers a range of features designed to enhance your experience. From secure password encryption to 24/7 customer support, we ensure that you have everything you need at your fingertips.</p>
+    <img src="https://images.pexels.com/photos/7240352/pexels-photo-7240352.jpeg" alt="Feature Image" width="300" height="200">
+    <video controls width="640" height="360">
+        <source src="https://www.pexels.com/video/woman-putting-simon-green-cd-in-an-envelope-5473850/" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <h3>Sign up Steps</h3>
+    <ol>
+        <li>Select a Plan</li>
+        <li>Complete form below</li>
+    </ol>
+</section>
+
+<section>
+    <h3>Pricing Plans</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>   
+            <tr>
+                <th>Plan</th>
+                <th>Price</th>
+                <th>Features</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Basic</td>
+                <td>$10/month</td>
+                <td>Access to basic features</td>
+            </tr>
+            <tr>
+                <td>Pro</td>
+                <td>$20/month</td>
+                <td>Access to all features, priority support</td>
+            </tr>
+            <tr>
+                <td>Enterprise</td>
+                <td>$50/month</td>
+                <td>Custom solutions, dedicated support</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h3>Sign Up</h3>    
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required placeholder="Enter your name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" autocomplete="email"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required placeholder="Enter your password"><br>
+        <label for="confirm-password">Confirm Password:</label><br>
+        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password"><br>
+
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender"><br>
+            <option value="" disabled selected>Select your gender</option><br>
+            <option value="male">Male</option><br>
+            <option value="female">Female</option><br>
+        </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment Option</legend>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required placeholder="Enter your address"><br>
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" required placeholder="Enter your city"><br>
+        
+        <label for="plan">Select a Plan:</label>
+        <select id="plan" name="plan" required>
+            <option value="" disabled selected>Select a plan</option>
+            <option value="basic">Basic - $10/month</option>
+            <option value="pro">Pro - $20/month</option>
+            <option value="enterprise">Enterprise - $50/month</option>
+        </select><br>
+        <label for="selected-plan">Selected Plan:</label>
+        <input type="text" id="selected-plan" name="selected-plan" value="Basic - $10/month" readonly><br>
+        <br>
+        <label for="payment-method">Payment Method:</label><br>
+        <select id="payment-method" name="payment-method" required>
+            <option value="" disabled selected>Select a payment method</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Bank Transfer</option>
+        </select><br>
+
+        <fieldset id="credit-card-details" style="display: none;">
+            <legend>Credit Card Details</legend>
+
+        <label for="card-number">Card Number:</label><br>
+        <input type="text" id="card-number" name="card-number" required placeholder="Enter your card number" pattern="\d{16}" title="16 digits required"><br>   
+        <label for="expiry-date">Expiry Date:</label><br>
+        <input type="month" id="expiry-date" name="expiry-date" required><br>
+        <label for="cvv">CVV:</label><br>
+        <input type="text" id="cvv" name="cvv" required placeholder="Enter your CVV" pattern="\d{3}" title="3 digits required"><br>
+        <label for="billing-address">Billing Address:</label><br>
+        <input type="text" id="billing-address" name="billing-address" required placeholder="Enter your billing address"><br><br>
+        </fieldset>
+
+        
+
+       
+
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" value="agree" required>
+            I agree to the terms and conditions
+        </label>        <br><br>
+        </fieldset> 
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
